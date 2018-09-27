@@ -7,7 +7,7 @@ Movie Tracker
 - John Baker
 - Anna Malawista
 - Tyler
-- Jose
+- Jose Gutierrez
 
 ## Vision statement: what would you tell potential customers?:
 A website to track and get notifications for movies that meet your interest.  
