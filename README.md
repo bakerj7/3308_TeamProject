@@ -6,7 +6,7 @@ Movie Tracker
 ## Team members' names:
 - John Baker
 - Anna Malawista
-- Tyler
+- Tyler Nevell
 - Jose Gutierrez
 
 ## Vision statement: what would you tell potential customers?:
