@@ -4,10 +4,10 @@
 Movie Tracker
 
 ## Team members' names:
-John Baker
-Anna
-Tyler
-Jose
+- John Baker
+- Anna Malawista
+- Tyler
+- Jose
 
 ## Vision statement: what would you tell potential customers?:
 A website to track and get notifications for movies that meet you interest.  
