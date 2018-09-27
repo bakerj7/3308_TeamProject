@@ -35,7 +35,6 @@ Functionality that may include:
 - Use of zoom meeting and live work sessions with screen sharing
 - Utalize github for collaboration
 - Compile examples of similar web applications for reference (Design)
-- 
 
 ## Development method: scrum, kanban, waterfall: with specifics!
 - Scrum, because of changing requirements and potential features to be added.
