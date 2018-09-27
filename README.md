@@ -10,7 +10,7 @@ Movie Tracker
 - Jose
 
 ## Vision statement: what would you tell potential customers?:
-A website to track and get notifications for movies that meet you interest.  
+A website to track and get notifications for movies that meet your interest.  
 Functionality that may include:
 - Ability to input preferences of actors, ratings, location, genre, etc.
 - Set notifications for new movie releases that match your preferences.
