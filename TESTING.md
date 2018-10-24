@@ -1,6 +1,7 @@
 # Test Cases
 
-## Use case name
+## Test Case 1
+### Use case name
     Navigating
 ### Description
     Navigating to new and existing movie lists
@@ -26,8 +27,8 @@
     User has navigated all three pages
 
 
-
-## Use case name
+## Test Case 2
+### Use case name
     Create New List
 ### Description
     User creates new movie preference settings and list
@@ -57,8 +58,8 @@
     List of user's movie choices
 
 
-
-## Use case name
+## Test Case 3
+### Use case name
     View Movie Lists
 ### Description
     User can view and browse created movie lists
