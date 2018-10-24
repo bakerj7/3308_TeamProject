@@ -1,6 +1,6 @@
-## Test Cases
+# Test Cases
 
-# Use case name
+### Use case name
     Navigating
 # Description
     Navigating to new and existing movie lists
