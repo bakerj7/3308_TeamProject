@@ -1,6 +1,6 @@
 # Test Cases
 
-## Test Case 1
+## Test Case 1:
 ### Use case name
     Navigating
 ### Description
@@ -27,7 +27,7 @@
     User has navigated all three pages
 
 
-## Test Case 2
+## Test Case 2:
 ### Use case name
     Create New List
 ### Description
@@ -58,7 +58,7 @@
     List of user's movie choices
 
 
-## Test Case 3
+## Test Case 3:
 ### Use case name
     View Movie Lists
 ### Description
