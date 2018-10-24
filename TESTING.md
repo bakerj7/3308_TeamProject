@@ -22,7 +22,7 @@
 ### Status (Pass/Fail)
     Pass
 ### Notes
-    Additional functionality for 'Create' and 'View' to be handled in additional test cases
+    Additional functionality for 'Create' and 'View' pages to be handled in additional test cases
 ### Post-conditions
     User has navigated all three pages
 
