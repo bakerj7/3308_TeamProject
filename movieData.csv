@@ -1,4 +1,6 @@
-Movie, Genre
-Fargo, Comedy
-The Godfather, Drama
-The Godfather II, Drama
+Movie, Genre, Actor
+Fargo, Comedy, Actress
+The Godfather, Drama, Robert Dinero
+The Godfather II, Drama, Robert Dinero
+Star Wars, Action, Harrison Ford
+Indiana Jones and the Raiders of the Lost Ark, Action, Harrison Ford
