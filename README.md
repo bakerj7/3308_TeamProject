@@ -6,7 +6,6 @@ Movie Tracker
 ## Team members' names:
 - John Baker
 - Anna Malawista
-- Tyler Nevell
 - Jose Gutierrez
 
 ## Vision statement: what would you tell potential customers?:
@@ -25,7 +24,7 @@ Functionality that may include:
 - Promote theater attendance (Sell advertising/ranking to movie theaters)
 
 ## Risks to project completion, possibly including:
-- Need to learn html, api integration, javascript, css, ui 
+- Need to learn html, api integration, javascript, css, ui
 - Working remotely from team members (different time zones)
 - Ability to pull required information/data
 - Lack of experience in front-end design
