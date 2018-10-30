@@ -37,7 +37,7 @@ for line in open('movieData.csv'):
             foundActor = True
 
 if( not foundActor):
-    print("***Actor " + actor + " was not found for genre.  Results used 'NONE' for actor***")
+    print("***Actor " + actor + " was not found.  Results used 'NONE' for actor***")
 
 #Output user results to txt file
 print("***Currently exporting results***")
