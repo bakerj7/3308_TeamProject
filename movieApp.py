@@ -15,7 +15,7 @@ foundGenre = False
 genreList = ["Action", "Adventure", "Animation", "Biography", \
              "Comedy", "Crime", "Documentary", "Drama", "Family", "Fantasy", \
              "Horror", "Mystery", "Romance", "Sci-Fi", "Thriller", "Western" ]
-
+#Input Genre
 while not foundGenre:
     print(genreList)
     genre = input("What is your favorite genre? ")
@@ -23,14 +23,31 @@ while not foundGenre:
         print("bad input")
     else:
         foundGenre = True
+#Input Actor
 actor = input("Who is your favorite actor? ")
+
+#Find Results
+movieList = []
+foundActor = False
 for line in open('movieData.csv'):
     if genre in line or actor in line:
         print(line)
+        movieList.append(line)
+        if actor in line and foundActor == False:
+            foundActor = True
+
+if( not foundActor):
+    print("***Actor " + actor + " was not found for genre.  Results used 'NONE' for actor***")
+
+#Output user results to txt file
+print("***Currently exporting results***")
 
 output_file = open(username + '.txt', 'w')
 output_file.write("Username: " + username + '\n')
 output_file.write("Genres: " + genre + '\n')
 output_file.write("Actors: " + actor + '\n')
-output_file.write("CSV Line: " + line)
+#Output list
+output_file.write("CSV Line: " + '\n')
+for i in movieList:
+    output_file.write(i + '\n')
 output_file.close()
