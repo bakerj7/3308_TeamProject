@@ -12,8 +12,10 @@ username = input("Please enter a username: ")
 while not username:
     username = input("Please enter a valid username")
 foundGenre = False
-genreList = ["Drama", "Action", "Comedy", "SciFi", "Documentary", "Romance", \
-             "Fantasy"]
+genreList = ["Action", "Adventure", "Animation", "Biography", \
+             "Comedy", "Crime", "Documentary", "Drama", "Family", "Fantasy", \
+             "Horror", "Mystery", "Romance", "Sci-Fi", "Thriller", "Western" ]
+
 while not foundGenre:
     print(genreList)
     genre = input("What is your favorite genre? ")
@@ -30,4 +32,5 @@ output_file = open(username + '.txt', 'w')
 output_file.write("Username: " + username + '\n')
 output_file.write("Genres: " + genre + '\n')
 output_file.write("Actors: " + actor + '\n')
+output_file.write("CSV Line: " + line)
 output_file.close()
