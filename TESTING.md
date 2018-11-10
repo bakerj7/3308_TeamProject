@@ -6,7 +6,7 @@ Movie Queue
 3. Jose Gutierrez
 
 # Automated Test Cases:
-Automated test cases (unit tests) are located in ./UnitTesting
+Automated test cases (unit tests) are located in "./UnitTesting".
 Run "cd ./UnitTesting"
 Run "Python3 ./test.py"
 
