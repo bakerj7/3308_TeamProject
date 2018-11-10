@@ -1,12 +1,20 @@
-# Test Cases
+### Project:
+Movie Queue
+###Team Members:
+Anna Malawista
+John Baker
+Jose Gutierrez
+
+
+# USER ACCEPTANCE TESTING
 
 ## Test Case 1:
 ### Use case name
-    Navigating
+Navigating
 ### Description
-    Navigating to new and existing movie lists
+Navigating to new and existing movie lists
 ### Pre-conditions
-    Web page loads
+Web page loads
 ### Test steps
     1. Load home page
     2. Click "Create New List" Page Button
@@ -16,25 +24,25 @@
     6. Click "View Existing Lists" Page Button
     7. Load "View Existing Lists" Page
 ### Expected result
-    User should be able navigate to all three pages (Home, Create, View) with each page loading
+User should be able navigate to all three pages (Home, Create, View) with each page loading
 ### Actual result
-    xxx
+N/A
 ### Status (Pass/Fail)
-    Pass
+N/A
 ### Notes
-    Additional functionality for 'Create' and 'View' pages to be handled in additional test cases
+Additional functionality for 'Create' and 'View' pages to be handled in additional test cases
 ### Post-conditions
     User has navigated all three pages
 
 
 ## Test Case 2:
 ### Use case name
-    Create New List
+Create New List
 ### Description
-    User creates new movie preference settings and list
+User creates new movie preference settings and list
 ### Pre-conditions
-    User has movie preferences
-    User has navigated to "Create New List" Page
+User has movie preferences
+User has navigated to "Create New List" Page
 ### Test steps
     1. Enter new list name
     2. Enter genre preferences
@@ -47,25 +55,25 @@
     9. Generate preview list
     10. Save list
 ### Expected result
-    Named list of movie preferences is saved to the database
+Named list of movie preferences is saved to the database
 ### Actual result
-    xxx
+N/A
 ### Status (Pass/Fail)
-    Pass
+N/A
 ### Notes
-    N/A
+N/A
 ### Post-conditions
-    List of user's movie choices
+List of user's movie choices
 
 
 ## Test Case 3:
 ### Use case name
-    View Movie Lists
+View Movie Lists
 ### Description
-    User can view and browse created movie lists
+User can view and browse created movie lists
 ### Pre-conditions
-    Movie lists have been created
-    User has navigated to "View Existing Lists" Page
+Movie lists have been created
+User has navigated to "View Existing Lists" Page
 ### Test steps
     1. User can browse list of created movie lists
     2. Lists can be sorted alphabetically and by date
@@ -73,12 +81,12 @@
     4. User can open/view a list of movies
 
 ### Expected result
-    User has navigated and opened an existing list
+User has navigated and opened an existing list
 ### Actual result
-    xxx
+N/A
 ### Status (Pass/Fail)
-    Pass
+N/A
 ### Notes
-    N/A
+N/A
 ### Post-conditions
-    View of existing movie list
+View of existing movie list
