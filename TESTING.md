@@ -5,6 +5,7 @@ Movie Queue
 2. John Baker
 3. Jose Gutierrez
 
+
 # Automated Test Cases:
 Automated test cases (unit tests) are located in "./UnitTesting"
 1. Run "cd ./UnitTesting"
