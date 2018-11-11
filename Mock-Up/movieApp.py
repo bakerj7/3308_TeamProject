@@ -6,6 +6,18 @@
 # Weighting
 # cleaning inputs
 #
+import os
+
+#---------------------------------------------------
+#Function to create folder
+def createFolder(directory):
+    try:
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+    except OSError:
+        print ('Error: Creating directory. ' +  directory)
+#---------------------------------------------------
+
 print("Welcome to the world's greatest movie tool!")
 
 username = input("Please enter a username: ")
@@ -42,7 +54,9 @@ if( not foundActor):
 #Output user results to txt file
 print("***Currently exporting results***")
 
-output_file = open(username + '.txt', 'w')
+#output_file = open(username + '.txt', 'w')
+createFolder('./Lists/')
+output_file = open('./Lists/' + username + '.txt', 'w')
 output_file.write("Username: " + username + '\n')
 output_file.write("Genres: " + genre + '\n')
 output_file.write("Actors: " + actor + '\n')
@@ -51,3 +65,12 @@ output_file.write("CSV Line: " + '\n')
 for i in movieList:
     output_file.write(i + '\n')
 output_file.close()
+
+#---------------------------------------------------
+#Function to create folder
+def createFolder(directory):
+    try:
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+    except OSError:
+        print ('Error: Creating directory. ' +  directory)
