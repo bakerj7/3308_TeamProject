@@ -13,12 +13,12 @@ Automated test cases (unit tests) are located in "./UnitTesting"
 
 ## test_filters
 Unit test for filtering movie list by category.  
-Should pass/test the following: *TESTS CURRENTLY FAIL*
+Should pass/test the following: *TESTS CURRENTLY PASS*
 
 1. Inputing a genre should return all movies with the input genre
 2. Inputing an actor should return all movies with the input actor
 3. Inputing a genre and actor should return only movies with the input genre and actor
-4. If a genre or actor is not present, user should be notified and list proceeds without input
+4. If a genre or actor is not present, an error should be raised
 
 ## test_list_create
 Unit test to confirm creation of user saved list.  

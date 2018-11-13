@@ -18,41 +18,44 @@ def createFolder(directory):
         print ('Error: Creating directory. ' +  directory)
 #---------------------------------------------------
 def movieApp(UserName, Genre, Actor):
-    print("Welcome to the world's greatest movie tool!")
+    #print("Welcome to the world's greatest movie tool!")
 
-    username = input("Please enter a username: ")
-    while not username:
-        username = input("Please enter a valid username")
+    username = UserName
+    #while not username:
+        #username = input("Please enter a valid username")
     foundGenre = False
     genreList = ["Action", "Adventure", "Animation", "Biography", \
                  "Comedy", "Crime", "Documentary", "Drama", "Family", "Fantasy", \
                  "Horror", "Mystery", "Romance", "Sci-Fi", "Thriller", "Western" ]
     #Input Genre
     while not foundGenre:
-        print(genreList)
-        genre = input("What is your favorite genre? ")
+        #print(genreList)
+        genre = Genre
         if genre not in genreList:
-            print("bad input")
+            #print("bad input")
+            raise ValueError
         else:
             foundGenre = True
     #Input Actor
-    actor = input("Who is your favorite actor? ")
+    actor = Actor
 
     #Find Results
     movieList = []
     foundActor = False
-    for line in open('movieData.csv'):
-        if genre in line or actor in line:
-            print(line)
+    movie_data = open('movieData.csv')
+    for line in movie_data:
+        if (genre in line and actor in line) or (genre in line and actor == "None"):
+            #print(line)
             movieList.append(line)
-            if actor in line and foundActor == False:
-                foundActor = True
-
-    if( not foundActor):
-        print("***Actor " + actor + " was not found.  Results used 'NONE' for actor***")
+        if actor in line and foundActor == False:
+            foundActor = True
+    movie_data.close()
+    if(not foundActor and actor != "None"):
+        raise ValueError
+        #print("***Actor " + actor + " was not found.  Results used 'NONE' for actor***")
 
     #Output user results to txt file
-    print("***Currently exporting results***")
+    #print("***Currently exporting results***")
 
     #output_file = open(username + '.txt', 'w')
     createFolder('./Lists/')
@@ -65,12 +68,3 @@ def movieApp(UserName, Genre, Actor):
     for i in movieList:
         output_file.write(i + '\n')
     output_file.close()
-
-    #---------------------------------------------------
-    #Function to create folder
-    def createFolder(directory):
-        try:
-            if not os.path.exists(directory):
-                os.makedirs(directory)
-        except OSError:
-            print ('Error: Creating directory. ' +  directory)
