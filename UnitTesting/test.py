@@ -117,6 +117,21 @@ class movieAppTestCase(unittest.TestCase):
         self.assertFalse(find_user_lists('test.txt'))
         self.assertFalse(find_user_lists('test_9.txt'))
 
+        # Test if file can be opened.
+        def check_file(file_name):
+            try:
+                f = open('./Lists/' + file_name, 'r')
+                f.close()
+            except IOError:
+                 return False
+            return True
+
+        self.assertTrue(check_file('test_1.txt'))
+        self.assertTrue(check_file('test_2.txt'))
+        self.assertTrue(check_file('test_3.txt'))
+        self.assertTrue(check_file('test_4.txt'))
+
+
 
 # Main: Run Test Cases
 if __name__ == '__main__':
