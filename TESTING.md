@@ -30,7 +30,7 @@ Should pass/test the following: *TESTS CURRENTLY PASS*
 
 ## test_user_list
 Unit test for confirming user name exists and returns associated list.  
-Should pass/test the following: *TESTS CURRENTLY FAIL*
+Should pass/test the following: *TESTS 1 AND 2 CURRENTLY PASS; 3 CURRENTLY FAILS*
 
 1. Search lists to confirm username exists
 2. Return list for given user name
