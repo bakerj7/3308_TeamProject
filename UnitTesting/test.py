@@ -76,7 +76,21 @@ class movieAppTestCase(unittest.TestCase):
 
 
     def test_list_create(self):
-        pass
+        # Test Creation of .txt file
+        # Check if file exsists
+        movieApp_test.movieApp("test_1", "Drama", "Marlon Brando")
+        self.assertTrue(os.path.isfile('./Lists/test_1.txt'))
+
+        movieApp_test.movieApp("test_2", "Action", "Ruth Wilson")
+        self.assertTrue(os.path.isfile('./Lists/test_2.txt'))
+
+        #Check if file in not empty
+        movieApp_test.movieApp("test_3", "Adventure", "Scarlett Johansson")
+        self.assertTrue(os.path.getsize('./Lists/test_3.txt') > 0)
+
+        movieApp_test.movieApp("test_4", "Documentary", "Daniel Radcliffe")
+        self.assertTrue(os.path.getsize('./Lists/test_3.txt') > 0)
+
 
     def test_user_list(self):
         pass
