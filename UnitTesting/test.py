@@ -93,7 +93,29 @@ class movieAppTestCase(unittest.TestCase):
 
 
     def test_user_list(self):
-        pass
+        movieApp_test.movieApp("test_1", "Drama", "Marlon Brando")
+        movieApp_test.movieApp("test_2", "Action", "Ruth Wilson")
+        movieApp_test.movieApp("test_3", "Adventure", "Scarlett Johansson")
+        movieApp_test.movieApp("test_4", "Documentary", "Daniel Radcliffe")
+
+
+        def find_user_lists(file_name):
+            folder = os.listdir("./Lists")
+            if file_name in folder:
+                return True
+            else:
+                False
+
+        # Find files by file name; file name is same as username.
+        self.assertTrue(find_user_lists('test_1.txt'))
+        self.assertTrue(find_user_lists('test_2.txt'))
+        self.assertTrue(find_user_lists('test_3.txt'))
+        self.assertTrue(find_user_lists('test_4.txt'))
+
+        # Test for false positives
+        self.assertFalse(find_user_lists('test_29.txt'))
+        self.assertFalse(find_user_lists('test.txt'))
+        self.assertFalse(find_user_lists('test_9.txt'))
 
 
 # Main: Run Test Cases
