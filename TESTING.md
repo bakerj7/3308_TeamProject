@@ -22,7 +22,7 @@ Should pass/test the following: *TESTS CURRENTLY PASS*
 
 ## test_list_create
 Unit test to confirm creation of user saved list.  
-Should pass/test the following: *TESTS CURRENTLY FAIL*
+Should pass/test the following: *TESTS CURRENTLY PASS*
 
 1. List is created from creation input
 2. New file exists
