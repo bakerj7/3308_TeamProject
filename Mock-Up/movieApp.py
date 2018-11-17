@@ -18,19 +18,22 @@ def createFolder(directory):
         print ('Error: Creating directory. ' +  directory)
         
 #---------------------------------------------------
-def pickMode(mode):
+#Function to call create or search
+def pickMode(mode): #mode is user input string selecting create or search
     call = False
-    while call == False:
+    while call == False: #keep asking for input until correct input is found
         if (mode[0] == "c"):
             createList()
-            call = True
+            call = True #stop looping
         elif (mode[0] == "s"):
             search()
-            call = True
+            call = True #stop looping
         else:
+            #incorrect input, ask for new input
             mode = input('Unknown Input\nType "c" for create or "s" for search: ')
         
 #---------------------------------------------------
+#Function to create a new list
 def createList():
     username = input("Please enter a username: ")
     while not username:
@@ -79,39 +82,31 @@ def createList():
     output_file.close()
     
 #---------------------------------------------------
+#Function to search for pre-made list
 def search():
     username = input("What is your username? ")
-    fileDir = os.path.dirname(os.path.realpath('__file__'))
-    '''
-    fileName = username+".txt"
-    filePath = os.path.join(fileDir, fileName)
-    file = open(filePath,"r")
-    '''
-    fileName = "./Lists/"+username+".txt"
-    if os.path.exists(fileName):
+    fileName = "./Lists/"+username+".txt" #form file name from user name
+    if os.path.exists(fileName): #check if file exists
+        #would user like to see list or just checking exists
         view = input('List found\nWould you like to view the list now ("y" or "n")? ')
         y_n = False
-        while y_n == False:
-            if (view[0] == "y"):
+        while y_n == False: #loop until correct input found
+            if (view[0] == "y"): #print list
                 file = open(fileName,"r")
                 for line in file:
                     print(line)
                 y_n = True
-            elif (view[0] == "n"):
+            elif (view[0] == "n"): #ask user what they would like to do next
                 mode = input('Would you like to create a list ("c") or search for another list ("s")? ')
-                pickMode(mode)
+                pickMode(mode) #function to call create or search based on user input
                 y_n = True
             else:
+                #incorrect input, ask for new input
                 view = input('Unknown Input/nType "y" for yes or "n" for n: ')
-    else:
+    else: #list not found
         print("Sorry, list not found")
         mode = input('Would you like to create a list ("c") or search for another list ("s")? ')
-        pickMode(mode) 
-    '''
-    for root, dirs, files in os.walk("./Lists"):
-        for file in files:
-            print(os.path.join(root, file))
-    '''
+        pickMode(mode) #function to call create or search based on user input
     
 #---------------------------------------------------
         
