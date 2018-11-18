@@ -9,7 +9,8 @@ Movie Queue
 # Automated Test Cases:
 Automated test cases (unit tests) are located in "./UnitTesting"
 1. Run "cd ./Mock-Up"
-2. Run "python3 ./test.py -b"
+2. Run "chmod +x test.py"
+3. Run "python3 ./test.py -b"
 
 ## test_filters
 Unit test for filtering movie list by category.  
