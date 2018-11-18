@@ -8,8 +8,8 @@ Movie Queue
 
 # Automated Test Cases:
 Automated test cases (unit tests) are located in "./UnitTesting"
-1. Run "cd ./UnitTesting"
-2. Run "Python3 ./test.py"
+1. Run "cd ./Mock-Up"
+2. Run "python3 ./test.py -b"
 
 ## test_filters
 Unit test for filtering movie list by category.  
@@ -30,12 +30,27 @@ Should pass/test the following: *TESTS CURRENTLY PASS*
 
 ## test_user_list
 Unit test for confirming user name exists and returns associated list.  
-Should pass/test the following: *TESTS 1 AND 2 CURRENTLY PASS; 3 CURRENTLY FAILS*
+Should pass/test the following: *TESTS CURRENTLY PASS*
 
 1. Search lists to confirm username exists
 2. Return list for given user name
 3. Notify user that list does not exist if username is not found
 
+## test_search
+Unit test for confirming user name exists and returns associated list.  
+Should pass/test the following: *TESTS CURRENTLY PASS*
+
+1. When correct username is input, list found and returns True
+2. When incorrect username is input, list found and returns False
+
+## Expected Output
+Testing file checks if mock is installed, so output about mock installation or requirement already satisfied will seen followed by:
+
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.065s
+
+OK
 
 # User Acceptance Testing:
 

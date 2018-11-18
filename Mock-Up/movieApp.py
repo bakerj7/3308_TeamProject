@@ -48,6 +48,7 @@ def createList():
         genre = input("What is your favorite genre? ")
         if genre not in genreList:
             print("bad input")
+            raise ValueError
         else:
             foundGenre = True
     #Input Actor
@@ -57,13 +58,13 @@ def createList():
     movieList = []
     foundActor = False
     for line in open('movieData.csv'):
-        if genre in line or actor in line:
+        if (genre in line and actor in line) or (genre in line and actor == "None"):
             print(line)
             movieList.append(line)
-            if actor in line and foundActor == False:
-                foundActor = True
-
-    if( not foundActor):
+        if actor in line and foundActor == False:
+            foundActor = True
+    if(not foundActor and actor != "None"):
+        raise ValueError
         print("***Actor " + actor + " was not found.  Results used 'NONE' for actor***")
 
     #Output user results to txt file
@@ -80,13 +81,16 @@ def createList():
     for i in movieList:
         output_file.write(i + '\n')
     output_file.close()
+#---------------------------------------------------
+def findFile(username):
+    fileName = "./Lists/"+username+".txt" #form file name from user name
+    return os.path.exists(fileName)
     
 #---------------------------------------------------
 #Function to search for pre-made list
 def search():
     username = input("What is your username? ")
-    fileName = "./Lists/"+username+".txt" #form file name from user name
-    if os.path.exists(fileName): #check if file exists
+    if findFile(username): #check if file exists
         #would user like to see list or just checking exists
         view = input('List found\nWould you like to view the list now ("y" or "n")? ')
         y_n = False
@@ -109,8 +113,11 @@ def search():
         pickMode(mode) #function to call create or search based on user input
     
 #---------------------------------------------------
-        
-print("Welcome to the world's greatest movie tool!")
-mode = input('Would you like to create a list ("c") or search for a pre-existing list ("s")? ')
-pickMode(mode)
 
+def main():
+    print("Welcome to the world's greatest movie tool!")
+    mode = input('Would you like to create a list ("c") or search for a pre-existing list ("s")? ')
+    pickMode(mode)
+    
+if __name__ == "__main__": 
+    main()
