@@ -7,7 +7,7 @@ Movie Queue
 
 
 # Automated Test Cases:
-Automated test cases (unit tests) are located in "./UnitTesting"
+Automated test cases (unit tests) are located in "./Mock-Up"
 1. Run "cd ./Mock-Up"
 2. Run "chmod +x test.py"
 3. Run "python3 ./test.py -b"
