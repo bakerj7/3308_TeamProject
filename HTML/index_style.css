@@ -1,0 +1,80 @@
+/* Stlye Sheet specificly for homepage */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  padding: 10px;
+  margin: 0px;
+}
+
+h2 {
+  padding: 10px;
+  margin: 0px;
+}
+
+#banner {
+  background-color: rgba(1, 1, 1, 0.8);
+  height: 110px;
+}
+
+#banner_title {
+  color: #FFFFFF;
+}
+
+#bg_filter {
+  background-color: #FFFFFF;
+  opacity: 0.35;
+}
+
+div.nav {
+  background-color: rgba(1, 1, 1, 0.8);
+  width: 400px;
+  height: 164px;
+
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+}
+
+.page_button {
+  background-color: rgba(132, 132, 132, 1);
+  width: 116px;
+  height: 44px;
+}
+
+#create {
+  float: left;
+}
+
+#explore {
+  float: right;
+}
+
+.page_button:hover {
+  background-color: rgba(100, 100, 100, 1);
+}
+
+.page_button_txt {
+  color: #FFFFFF;
+  opacity: 1;
+  margin: auto;
+  text-align: center;
+  line-height: 44px;
+}
+
+#nav_buttons {
+  height: 44px;
+  width: 290px;
+  margin: auto;
+  padding-top: 60px;
+}
+
+a {
+  text-decoration: none;
+}
