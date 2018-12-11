@@ -137,16 +137,6 @@ input:focus {
   float: left;
 }
 
-.result {
-  border-bottom: 1px solid #dbdbdb;
-  height: 40px;
-  line-height: 40px;
-}
-
-.result:Hover {
-  background-color: #f2f2f2;
-}
-
 #add_it {
   height: 22px;
   width: 250px;
@@ -212,6 +202,8 @@ input:focus {
   border-bottom: 1px solid #dbdbdb;
   height: 40px;
   line-height: 40px;
+  padding-left: 8px;
+  overflow: hidden;
 }
 
 .result:Hover {
