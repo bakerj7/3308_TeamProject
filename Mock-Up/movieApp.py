@@ -37,30 +37,44 @@ def pickMode(mode): #mode is user input string selecting create or search
             mode = input('Unknown Input\nType "c" for create or "s" for search: ')
 
 #---------------------------------------------------
+#Generate genre list from TMDB API
+genre_response = urllib.request.urlopen(f'https://api.themoviedb.org/3/genre/movie/list?api_key={api_key}')
+
+genre_dict = {}
+genre_data = json.load(genre_response)
+for entry in genre_data['genres']:
+    genre_dict[entry['name']] = entry['id']
+
+#---------------------------------------------------
 #Function to create a new list
 def createList():
     username = input("Please enter a username: ")
     while not username:
         username = input("Please enter a valid username")
     foundGenre = False
-    genreList = ["Action", "Adventure", "Animation", "Biography", \
-                 "Comedy", "Crime", "Documentary", "Drama", "Family", "Fantasy", \
-                 "Horror", "Mystery", "Romance", "Sci-Fi", "Thriller", "Western" ]
+
     #Input Genre
     while not foundGenre:
-        print(genreList)
-        genre = input("What is your favorite genre? ")
-        if genre not in genreList:
+        print("\nGenre List: \n")
+        for genre in genre_dict:
+            print(genre)
+        genre = input("\nWhat is your favorite genre? ")
+        if genre not in genre_dict:
             print("bad input")
             raise ValueError
         else:
             foundGenre = True
     #Input Actor
     actor = input("Who is your favorite actor? ")
+    #This replaces spaces with '+' for API call
+    actorplus = actor.replace(" ", "+")
 
     #Find Results
     movieList = []
     foundActor = False
+    genre_id = genre_dict[genre]
+
+    #Keeping this block commented out just in case.
     '''
     with open("./movieData.csv") as f:
         for line in f:
@@ -73,6 +87,8 @@ def createList():
             raise ValueError
             print("***Actor " + actor + " was not found.  Results used 'NONE' for actor***")
     '''
+
+    """
     #Get Actor ID
     with open("./person_ids_12_09_2018.json") as f:
         for line in f:
@@ -81,22 +97,45 @@ def createList():
                 actor_id = line_data["id"]
                 break
     #Get Genre ID
-    with open("./genre_list.json") as f:
+    with open("./genre_list.json") as f:    actor_data = json.load(actor_response)
+    for entry in actor_data['results']:
+        print(entry['known_for']['title'])
+        for movie in entry['known_for']:
+            print(movie['title'])
+            movieList.append(entry['known_for'])
         for line in f:
             line_data = json.loads(line)
             if (line_data['name'] == genre):
                 genre_id = line_data["id"]
                 break
+    """
 
     #Query API
-    response = urllib.request.urlopen(f'https://api.themoviedb.org/3/discover/movie?api_key={api_key}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_people={actor_id}&with_genres={genre_id}')
-    data = json.load(response)
-    for entry in data['results']:
+
+    actor_response = urllib.request.urlopen(f'https://api.themoviedb.org/3/search/person?api_key={api_key}&query={actorplus}')
+
+
+    movie_response = urllib.request.urlopen(f'https://api.themoviedb.org/3/discover/movie?api_key={api_key}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres={genre_id}')
+
+
+    actor_data = json.load(actor_response)
+    print("\nMovies featuring " + actor +":\n")
+    for entry in actor_data['results']:
+        for movie in entry['known_for']:
+            print(movie['title'])
+            movieList.append(movie['title'])
+
+
+
+    movie_data = json.load(movie_response)
+    print("\n" + genre + " movies:\n")
+    for entry in movie_data['results']:
         print(entry['title'])
         movieList.append(entry['title'])
 
 
     #Output user results to txt file
+    print("\n")
     print("***Currently exporting results***")
 
     #output_file = open(username + '.txt', 'w')
@@ -110,6 +149,9 @@ def createList():
     for i in movieList:
         output_file.write(i + '\n')
     output_file.close()
+
+
+
 #---------------------------------------------------
 def findFile(username):
     fileName = "./Lists/"+username+".txt" #form file name from user name
