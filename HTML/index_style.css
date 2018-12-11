@@ -8,6 +8,8 @@ body {
 
 h1 {
   padding: 10px;
+  padding-bottom: 4px;
+  padding-top: 20px;
   margin: 0px;
   font-weight: 100;
   letter-spacing: 1px;
@@ -15,9 +17,17 @@ h1 {
 
 h2 {
   padding: 10px;
+  padding-top: 2px;
   margin: 0px;
   font-weight: 100;
   letter-spacing: 1px;
+  font-size: 16px;
+}
+
+#logo {
+  height: 100px;
+  width: 150px;
+  padding-top: 5px;
 }
 
 #banner {
@@ -29,6 +39,11 @@ h2 {
 
 #banner_title {
   color: #FFFFFF;
+  float: left;
+}
+
+#banner_logo {
+  float: left;
 }
 
 #bg_filter {
@@ -65,7 +80,7 @@ div.nav {
 }
 
 .page_button:hover {
-  background-color: rgba(115, 108, 132, 1);
+  background-color: rgb(83, 118, 130, 1);
 }
 
 .page_button_txt {

@@ -1,0 +1,228 @@
+/* Stlye Sheet specificly for Create page */
+
+body {
+  font-family: Gill Sans, Helvetica, sans-serif;
+  font-weight: 100;
+  margin: 0px;
+}
+
+/* Banner Items */
+
+h1 {
+  padding: 10px;
+  padding-bottom: 4px;
+  padding-top: 20px;
+  margin: 0px;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+h2 {
+  padding: 10px;
+  padding-top: 2px;
+  margin: 0px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+#logo {
+  height: 100px;
+  width: 150px;
+  padding-top: 5px;
+}
+
+#banner {
+  background-color: rgba(1, 1, 1, 0.95);
+  height: 110px;
+  margin: 0px;
+  padding: 0px;
+}
+
+#banner_title {
+  color: #FFFFFF;
+  float: left;
+}
+
+#banner_logo {
+  float: left;
+}
+
+/* Search Input */
+
+#search_box {
+  width: 25%;
+  padding: 20px;
+  padding-top: 100px;
+  padding-left: 50px;
+  float: left;
+}
+
+.search_group {
+  height: 45px;
+  padding-top: 22px;
+}
+
+#search_title {
+  font-weight: 400;
+  border-bottom: 2px solid black;
+  width: 250px;
+}
+
+input {
+  width: 250px;
+  height: 20px;
+  border: none;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+input[type="text"]:hover {
+  border-bottom: 2px solid #dbdbdb;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 2px solid #dbdbdb;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #dbdbdb;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #dbdbdb;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #dbdbdb;
+}
+
+#find_it {
+  height: 22px;
+  width: 250px;
+  margin: 0px;
+  padding: 0px;
+  padding-top: 15px;
+  margin-top: 48px;
+  background-color: #adadad;
+  line-height: 10px;
+  cursor: pointer;
+}
+
+#find_it:hover {
+  background-color: #7296a3;
+}
+
+/* Results */
+
+#results_box {
+  width: 25%;
+  float: left;
+  padding-top: 100px;
+}
+
+#results_title {
+  font-weight: 400;
+  width: 250px;
+}
+
+#results_table {
+  height: 475px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+  overflow: scroll;
+  float: left;
+}
+
+.result {
+  border-bottom: 1px solid #dbdbdb;
+  height: 40px;
+  line-height: 40px;
+}
+
+.result:Hover {
+  background-color: #f2f2f2;
+}
+
+#add_it {
+  height: 22px;
+  width: 250px;
+  margin: 0px;
+  padding: 0px;
+  padding-top: 15px;
+  margin-top: 40px;
+  background-color: #adadad;
+  line-height: 10px;
+  float: left;
+  cursor: pointer;
+}
+
+#add_it:hover {
+  background-color: #7296a3;
+}
+
+/* List */
+
+#list_box {
+  width: 25%;
+  float: left;
+  padding-top: 100px;
+  padding-left: 10%;
+}
+
+#list_title {
+  font-weight: 400;
+  width: 250px;
+}
+
+#list_table {
+  height: 475px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+  overflow: scroll;
+  float: left;
+}
+
+#save_it {
+  height: 22px;
+  width: 250px;
+  margin: 0px;
+  padding: 0px;
+  padding-top: 15px;
+  margin-top: 40px;
+  background-color: #adadad;
+  line-height: 10px;
+  float: left;
+  cursor: pointer;
+}
+
+#save_it:hover {
+  background-color: #7296a3;
+}
+
+
+/* General */
+
+.result {
+  border-bottom: 1px solid #dbdbdb;
+  height: 40px;
+  line-height: 40px;
+}
+
+.result:Hover {
+  background-color: #f2f2f2;
+}
+
+.button_text {
+  padding-left: 8px;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
