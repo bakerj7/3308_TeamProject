@@ -1,22 +1,30 @@
 /* Stlye Sheet specificly for homepage */
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Gill Sans, Helvetica, sans-serif;
+  font-weight: 100;
+  margin: 0px;
 }
 
 h1 {
   padding: 10px;
   margin: 0px;
+  font-weight: 100;
+  letter-spacing: 1px;
 }
 
 h2 {
   padding: 10px;
   margin: 0px;
+  font-weight: 100;
+  letter-spacing: 1px;
 }
 
 #banner {
-  background-color: rgba(1, 1, 1, 0.8);
+  background-color: rgba(1, 1, 1, 0.95);
   height: 110px;
+  margin: 0px;
+  padding: 0px;
 }
 
 #banner_title {
@@ -29,7 +37,7 @@ h2 {
 }
 
 div.nav {
-  background-color: rgba(1, 1, 1, 0.8);
+  background-color: rgba(1, 1, 1, .95);
   width: 400px;
   height: 164px;
 
@@ -57,7 +65,7 @@ div.nav {
 }
 
 .page_button:hover {
-  background-color: rgba(100, 100, 100, 1);
+  background-color: rgba(115, 108, 132, 1);
 }
 
 .page_button_txt {
@@ -66,6 +74,8 @@ div.nav {
   margin: auto;
   text-align: center;
   line-height: 44px;
+  font-weight: 100;
+  letter-spacing: 2px;
 }
 
 #nav_buttons {
