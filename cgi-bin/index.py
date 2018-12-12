@@ -98,12 +98,8 @@ def getInput():
 
 #---------------------------------------------------
 def main():
-    if (len(sys.argv) == 1):
-        getInput()
-        return
-    else:
-        web()
-        return
+    web()
+    return
     
    
     
