@@ -2,6 +2,8 @@
 <html>
     <head>
         <link rel="stylesheet" href="create_style.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="movie_info.js" defer></script>
     </head>
     <body>
         <div id="banner">
@@ -51,37 +53,90 @@
         <div id="results_box">
             <div id="results_title">SEARCH RESULTS:</div>
             <div id="results_table">
-                <div class="result">The Matrix</div>
-                <div class="result">Clueless</div>
-                <div class="result">The Wizard of Oz</div>
-                <div class="result">The Godfather</div>
-                <div class="result">Black Panther</div>
-                <div class="result">The Shining</div>
-                <div class="result">Casablanca</div>
-                <div class="result">Lady Bird</div>
-                <div class="result">The Dark Night</div>
-                <div class="result">Robin Hood</div>
-                <div class="result">Star Wars</div>
-                <div class="result">Fantastic Beasts</div>
-                <div class="result">The Avengers</div>
-                <div class="result">A Star Was Born</div>
+                <div id="424694" class="result">The Matrix</div>
+                <div id="424694" class="result">Clueless</div>
+                <div id="424694" class="result">The Wizard of Oz</div>
+                <div id="424694" class="result">The Godfather</div>
+                <div id="424694" class="result">Black Panther</div>
+                <div id="424694" class="result">The Shining</div>
+                <div id="424694" class="result">Casablanca</div>
+                <div id="424694" class="result">Lady Bird</div>
+                <div id="424694" class="result">The Dark Night</div>
+                <div id="424694" class="result">Robin Hood</div>
+                <div id="424694" class="result">Star Wars</div>
+                <div id="424694" class="result">Fantastic Beasts</div>
+                <div id="424694" class="result">The Avengers</div>
+                <div id="424694" class="result">A Star Was Born</div>
             </div>
+            <!-- <div id="results_controls">
+              <div id="results_select_all" class="control">SELECT ALL</div>
+              <div id="results_select_none" class="control">SELECT NONE</div>
+            </div> -->
             <div id="add_it"><div class="button_text">ADD IT!</div></div>
         </div>
 
         <div id="list_box">
-            <div id="list_title">SEARCH RESULTS:</div>
+            <div id="list_title">CURRENT LIST:</div>
             <div id="list_table">
-                <div class="result">Clueless</div>
-                <div class="result">The Godfather</div>
-                <div class="result">Black Panther</div>
-                <div class="result">The Shining</div>
-                <div class="result">Casablanca</div>
-                <div class="result">Star Wars</div>
-                <div class="result">Fantastic Beasts</div>
-                <div class="result">The Avengers</div>
+
+            </div>
+            <div id="list_controls">
+              <!-- <div id="list_select_all" class="control">SELECT ALL</div>
+              <div id="list_select_none" class="control">SELECT NONE</div> -->
+              <div id="list_undo" class="control">UNDO SELECTED</div>
             </div>
             <div id="save_it"><div class="button_text">SAVE IT!</div></div>
         </div>
+
+        <!-- The Pop Up -->
+        <div id="myPop" class="pop">
+          <!-- Pop Up content -->
+          <div class="pop-content">
+            <span class="close">&times;</span>
+            <div id="poster">
+              <img id="poster_img" src="https://image.tmdb.org/t/p/w185/kqjL17yufvn9OVLyXYpvtyrFfak.jpg" alt="Image Not Available">
+            </div>
+            <div id="movie_info">
+              <div class="info_title">Title:</div>
+              <div id="title" class="info">Filler Text</div>
+
+              <div class="info_title">Tagline:</div>
+              <div id="tagline" class="info">Filler Text</div>
+
+              <div class="info_title">Overview:</div>
+              <div id="overview" class="info">Filler Text</div>
+
+              <div class="info_title">Actors:</div>
+              <div id="actors" class="info">Filler Text</div>
+
+              <div class="info_title">Length:</div>
+              <div id="length" class="info">Filler Text</div>
+
+              <div class="info_title">Release:</div>
+              <div id="release" class="info">Filler Text</div>
+
+              <div class="info_title">Genre:</div>
+              <div id="genre" class="info">Filler Text</div>
+
+              <div class="info_title">Rating:</div>
+              <div id="rating" class="info">Filler Text</div>
+
+              <div class="info_title">Website:</div>
+              <a id="website" href="url" target="_blank">url</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Save Pop Up -->
+        <div id="savePop" class="spop">
+          <!-- Pop Up content -->
+          <div class="spop-content">
+            <span class="close">&times;</span>
+            <div>Please Enter a Name for Your List:</div>
+            <input id="save_name" type="text" name="Save" placeholder="<My List Name>" maxlength="60" onfocus="this.placeholder = ''" onblur="this.placeholder = '<My List Name>'">
+            <div id="final_save"><div class="button_text">SAVE IT!</div></div>
+          </div>
+        </div>
+
     </body>
 </html>
