@@ -1,0 +1,16 @@
+body {
+    font-size: 10pt;
+    color: black;
+}
+h1 {
+    font-size: 24pt;
+    color: black; 
+}
+div {
+    float: left;
+    display: inline-block;
+    border-right: 20px solid white;
+}
+button {
+    width:200px;
+}
