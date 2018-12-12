@@ -193,3 +193,128 @@ a {
 .list_sel:Hover {
   background-color: #c0d9e2;
 }
+
+
+/* The Pop (background) */
+.pop {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Pop Content */
+.pop-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%;
+  height: 575px;
+  overflow: scroll;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Movie List */
+
+#list_box {
+  width: 80%;
+  float: left;
+  padding-top: 20px;
+  padding-left: 10%;
+}
+
+#list_title {
+  font-weight: 400;
+  width: 100%;
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+
+#list_table {
+  height: 475px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+  overflow: scroll;
+  float: left;
+}
+
+.result {
+  border-bottom: 1px solid #dbdbdb;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: initial;
+}
+
+.result:Hover {
+  background-color: #f2f2f2;
+}
+
+.result_sel {
+  border-bottom: 1px solid #dbdbdb;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #d9f2fc;
+}
+
+.result_sel:Hover {
+  background-color: #c0d9e2;
+}
+
+
+/* Pop Content */
+#poster {
+  float: left;
+  width: 200px;
+}
+
+#movie_info {
+  padding-left: 20px;
+  float: left;
+  width: 75%;
+}
+
+.info_title {
+  padding-top: 10px;
+  font-weight: 400;
+}
+
+.info {
+  padding-top: 4px;
+  font-size: 15px;
+}
+
+#website {
+  padding-top: 4px;
+  font-size: 15px;
+}

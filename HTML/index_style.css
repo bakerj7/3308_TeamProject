@@ -81,6 +81,7 @@ div.nav {
 
 .page_button:hover {
   background-color: rgb(83, 118, 130, 1);
+  cursor: pointer;
 }
 
 .page_button_txt {

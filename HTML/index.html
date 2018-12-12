@@ -3,6 +3,8 @@
 <html>
   <head>
     <link rel="stylesheet" href="index_style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="index.js" defer></script>
   </head>
   <body>
     <div style="position: fixed; z-index: -99; width: 100%; height: 100%">
@@ -25,14 +27,14 @@
     <div id="main">
       <div class="nav">
         <div id="nav_buttons">
-        <a href="movie_project_create.html">
-        <div class="page_button" id="create">
-          <p class="page_button_txt">CREATE</p>
-        </div></a>
-        <a href="movie_project_explore.html">
-        <div class="page_button" id="explore">
-          <p class="page_button_txt">EXPLORE</p>
-        </div></a>
+          <div class="page_button" id="create">
+            <p class="page_button_txt">CREATE</p>
+          </div>
+          <form id="create_nav" method='post' action='create.py'></form>
+          <div class="page_button" id="explore">
+            <p class="page_button_txt">EXPLORE</p>
+          </div>
+          <form id="explore_nav" method='post' action='search.py'></form>
         </div>
       </div>
     </div>

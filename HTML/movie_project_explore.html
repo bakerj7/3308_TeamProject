@@ -2,6 +2,8 @@
 <html>
     <head>
         <link rel="stylesheet" href="explore_style.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="movie_explore.js" defer></script>
     </head>
     <body>
         <div id="banner">
@@ -45,6 +47,72 @@
                 <div class="list">John Doe's Favorites</div>
                 <div class="list">Mary's Awesome List</div>
             </div>
+        </div>
+
+        <!-- The Pop Up -->
+        <div id="myListPop" class="pop">
+          <!-- Pop Up content -->
+          <div class="pop-content">
+            <span class="close">&times;</span>
+            <div id="list_box">
+              <div id="list_title">NONE:</div>
+              <div id="list_table">
+                  <div id="424694" class="result">The Matrix</div>
+                  <div id="424694" class="result">Clueless</div>
+                  <div id="424694" class="result">The Wizard of Oz</div>
+                  <div id="424694" class="result">The Godfather</div>
+                  <div id="424694" class="result">Black Panther</div>
+                  <div id="424694" class="result">The Shining</div>
+                  <div id="424694" class="result">Casablanca</div>
+                  <div id="424694" class="result">Lady Bird</div>
+                  <div id="424694" class="result">The Dark Night</div>
+                  <div id="424694" class="result">Robin Hood</div>
+                  <div id="424694" class="result">Star Wars</div>
+                  <div id="424694" class="result">Fantastic Beasts</div>
+                  <div id="424694" class="result">The Avengers</div>
+                  <div id="424694" class="result">A Star Was Born</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Pop Up -->
+        <div id="myPop" class="pop">
+          <!-- Pop Up content -->
+          <div class="pop-content">
+            <span class="close">&times;</span>
+            <div id="poster">
+              <img id="poster_img" src="https://image.tmdb.org/t/p/w185/kqjL17yufvn9OVLyXYpvtyrFfak.jpg" alt="Image Not Available">
+            </div>
+            <div id="movie_info">
+              <div class="info_title">Title:</div>
+              <div id="title" class="info">Filler Text</div>
+
+              <div class="info_title">Tagline:</div>
+              <div id="tagline" class="info">Filler Text</div>
+
+              <div class="info_title">Overview:</div>
+              <div id="overview" class="info">Filler Text</div>
+
+              <div class="info_title">Actors:</div>
+              <div id="actors" class="info">Filler Text</div>
+
+              <div class="info_title">Length:</div>
+              <div id="length" class="info">Filler Text</div>
+
+              <div class="info_title">Release:</div>
+              <div id="release" class="info">Filler Text</div>
+
+              <div class="info_title">Genre:</div>
+              <div id="genre" class="info">Filler Text</div>
+
+              <div class="info_title">Rating:</div>
+              <div id="rating" class="info">Filler Text</div>
+
+              <div class="info_title">Website:</div>
+              <a id="website" href="url" target="_blank">url</a>
+            </div>
+          </div>
         </div>
 
     </body>
