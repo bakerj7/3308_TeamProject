@@ -1,53 +1,51 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="movie_project_style.css" />
+        <link rel="stylesheet" href="explore_style.css" />
     </head>
     <body>
-        <h1 style="text-align:center;">Explore</h1>
-        <div style = "border-left: 20px solid white; border-right: 70px solid white">
-            <h2>Search:</h2>
-            <hr size="3" color="black">
-            LIST NAME:<br>
-            <input type="text" name="List Name" size="32" maxlength="40"><br>
-            <br><br>
-            <button>FIND IT!</button>
-            <br><br>
-            <button>GET LUCKY!</button>
+        <div id="banner">
+          <a href="index.html">
+          <div id="banner_logo">
+            <img id="logo" src="Logo.svg" />
+          </div>
+          <div id="banner_title">
+            <h1>MOVIE QUEUE</h1>
+            <h2>What's Up Next!</h2>
+          </div>
+          </a>
         </div>
-        <div>
-            SAVED LISTS: <br>
-            <table style="height: 223px; border-color: black; margin-left: auto; margin-right: auto;" border="2" width="600">
-                <tbody>
-                    <tr>
-                        <td style="width: 162px;">Dark Comedies</td>
-                    </tr>
-                    <tr>
-                        <td style="width: 162px;">Leonardo DiCaprio</td>
-                    </tr>
-                    <tr>
-                        <td style="width: 162px;">Feel Good Flix</td>
-                    </tr>
-                    <tr>
-                        <td style="width: 162px;">Thrillers with Strong Female Lead</td>
-                    </tr>
-                    <tr>
-                        <td style="width: 162px;">Beach Weekend</td>
-                    </tr>
-                    <tr>
-                        <td style="width: 162px;">Family Friendly</td>
-                    </tr>
-                    <tr>
-                        <td style="width: 162px;">Marvel and DC Universe</td>
-                    </tr>
-                    <tr>
-                        <td style="width: 162px;">Indie Comedies</td>
-                    </tr>
-                    <tr>
-                        <td style="width: 162px;">Realistic Horror Films</td>
-                    </tr>
-                </tbody>
-            </table>
+
+        <div id="search_box">
+            <div id="search_title">SEARCH:</div>
+            <div class="search_group">
+              <div class="search_title">LIST NAME:</div>
+              <input type="text" name="Title" placeholder="<Enter List Name>" maxlength="60" onfocus="this.placeholder = ''" onblur="this.placeholder = '<Enter List Name>'">
+            </div>
+            <div id="find_it"><div class="button_text">FIND IT!</div></div>
+            <div id="get_lucky"><div class="button_text">GET LUCKY!</div></div>
         </div>
+
+
+        <div id="saved_lists_box">
+            <div id="lists_title">SAVED LISTS:</div>
+            <div id="lists_table">
+                <div class="list">Dark Comedies</div>
+                <div class="list">Leonardo DiCaprio</div>
+                <div class="list">Feel Good Flix</div>
+                <div class="list">Thrillers with Strong Female Lead</div>
+                <div class="list">Beach Weekend</div>
+                <div class="list">Family Friendly</div>
+                <div class="list">Marvel and DC Universe</div>
+                <div class="list">Indie Comedies</div>
+                <div class="list">Realistic Horror Films</div>
+                <div class="list">Chill Movies</div>
+                <div class="list">Highschool Football</div>
+                <div class="list">Throw-backs</div>
+                <div class="list">John Doe's Favorites</div>
+                <div class="list">Mary's Awesome List</div>
+            </div>
+        </div>
+
     </body>
 </html>
