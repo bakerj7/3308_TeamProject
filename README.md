@@ -1,7 +1,7 @@
 # 3308_TeamProject
 
 ## Project Title:
-Movie Tracker
+Movie Queue
 
 ## Team members' names:
 - John Baker
