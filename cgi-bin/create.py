@@ -34,59 +34,12 @@ for entry in genre_data['genres']:
 
 #---------------------------------------------------
 #Function to create a new list
-def saveList(name, list, webBool):
-
-    #Format
-    movieList = []
-    
-    if (webBool == True):
-        for entry in list.split(','):
-            movieList.append(entry)
-    else:
-        movielist = list
-
-
-    createFolder('./Lists/')
-    output_file = open('./Lists/' + name + '.txt', 'w')
-    output_file.write("List Name: " + name + '\n')
-    output_file.write('\n')
-    #Output list
-    output_file.write("Movies: " + '\n')
-    movies = ""
-    for i in movieList:
-        output_file.write(i + '\n')
-        movies += i+"<br>" #built list for web search
-    output_file.close()
-
-    #save list to local storage
-    if webBool == True:
-        print('''
-        <div id="store" style='display: none'></div>
-
-        <script>
-        // Check browser support
-        if (typeof(Storage) !== "undefined") {
-          // Store
-          localStorage.setItem("'''+name+'''", "'''+movies+'''");
-          // Retrieve
-          document.getElementById("store").innerHTML = localStorage.getItem("'''+name+'''");
-        } else {
-          document.getElementById("store").innerHTML = "Sorry, your browser does not support Web Storage...";
-        }
-        </script>
-
-        </body>
-        </html>
-        ''')
-
-#---------------------------------------------------
-#Function to create a new list
 def createList(username, genre, actor, webBool):
     #This replaces spaces with '+' for API call
     actorplus = actor.replace(" ", "+")
 
     #Find Results
-    movieList = []
+    #movieList = []
     #foundActor = False
     genre_id = genre_dict[genre]
 
@@ -101,14 +54,12 @@ def createList(username, genre, actor, webBool):
                 #print("<br>")
     for entry in actor_data['results']:
         for movie in entry['known_for']:
-            if (webBool == True):
-                print("<div class='result' id='"+ str(movie['id']) +"' >")
+            print("<div class='result' id='"+ str(movie['id']) +"' >")
             print(movie['title'])
-            if (webBool == True):
-                print("</div>")
-            movieList.append(movie['title'])
+            print("</div>")
             #if webBool == True:
                 #print("<br>")
+            #movieList.append(movie['title'])
 
     #if webBool == True:
                 #print("<br>")
@@ -117,17 +68,9 @@ def createList(username, genre, actor, webBool):
     #if webBool == True:
                 #print("<br>")
     for entry in movie_data['results']:
-        if (webBool == True):
-            print("<div class='result' id='"+ str(entry['id']) +"' >")
+        print("<div class='result' id='"+ str(entry['id']) +"' >")
         print(entry['title'])
-        if (webBool == True):
-            print("</div>")
-        movieList.append(entry['title'])
-            
-    if (webBool == False):
-        saveList(username, movieList, False)
-        
-        
+        print("</div>")
         #if webBool == True:
                 #print("<br>")
         #movieList.append(entry['title'])
@@ -171,6 +114,51 @@ def createList(username, genre, actor, webBool):
         #</body>
         #</html>
         #''')
+
+#---------------------------------------------------
+#Function to create a new list
+def saveList(name, list, webBool):
+
+    #Format
+    movieList = []
+
+    for entry in list.split(','):
+        movieList.append(entry)
+
+
+    createFolder('./Lists/')
+    output_file = open('./Lists/' + name + '.txt', 'w')
+    output_file.write("List Name: " + name + '\n')
+    output_file.write('\n')
+    #Output list
+    output_file.write("Movies: " + '\n')
+    movies = ""
+    for i in movieList:
+        output_file.write(i + '\n')
+        movies += i+"<br>" #built list for web search
+    output_file.close()
+
+    #save list to local storage
+    if webBool == True:
+        print('''
+        <div id="store" style='display: none'></div>
+
+        <script>
+        // Check browser support
+        if (typeof(Storage) !== "undefined") {
+          // Store
+          localStorage.setItem("'''+name+'''", "'''+movies+'''");
+          // Retrieve
+          document.getElementById("store").innerHTML = localStorage.getItem("'''+name+'''");
+        } else {
+          document.getElementById("store").innerHTML = "Sorry, your browser does not support Web Storage...";
+        }
+        </script>
+
+        </body>
+        </html>
+        ''')
+
 
 #---------------------------------------------------
 # command line used
