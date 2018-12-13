@@ -1,0 +1,326 @@
+#!/usr/bin/env python3
+
+print('''
+/* Stlye Sheet specificly for Create page */
+
+body {
+  font-family: Gill Sans, Helvetica, sans-serif;
+  font-weight: 100;
+  margin: 0px;
+}
+
+/* Banner Items */
+
+h1 {
+  padding: 10px;
+  padding-bottom: 4px;
+  padding-top: 20px;
+  margin: 0px;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+h2 {
+  padding: 10px;
+  padding-top: 2px;
+  margin: 0px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+#logo {
+  height: 100px;
+  width: 150px;
+  padding-top: 5px;
+}
+
+#banner {
+  background-color: rgba(1, 1, 1, 0.95);
+  height: 110px;
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+}
+
+#banner_title {
+  color: #FFFFFF;
+  float: left;
+}
+
+#banner_logo {
+  float: left;
+}
+
+
+/* Search Input */
+
+#search_box {
+  width: 20%;
+  padding: 20px;
+  padding-top: 100px;
+  padding-left: 50px;
+  float: left;
+}
+
+.search_group {
+  height: 45px;
+  padding-top: 22px;
+}
+
+#search_title {
+  font-weight: 400;
+  border-bottom: 2px solid black;
+  width: 250px;
+}
+
+input {
+  width: 250px;
+  height: 20px;
+  border: none;
+  border-bottom: 1px solid #dbdbdb;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+input[type="text"]:hover {
+  border-bottom: 2px solid #dbdbdb;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 2px solid #dbdbdb;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #dbdbdb;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #dbdbdb;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #dbdbdb;
+}
+
+#find_it {
+  height: 22px;
+  width: 250px;
+  margin: 0px;
+  padding: 0px;
+  padding-top: 15px;
+  margin-top: 48px;
+  background-color: #adadad;
+  line-height: 10px;
+  cursor: pointer;
+}
+
+#find_it:hover {
+  background-color: #7296a3;
+}
+
+#get_lucky {
+  height: 22px;
+  width: 250px;
+  margin: 0px;
+  padding: 0px;
+  padding-top: 15px;
+  margin-top: 48px;
+  background-color: #adadad;
+  line-height: 10px;
+  cursor: pointer;
+}
+
+#get_lucky:hover {
+  background-color: #7296a3;
+}
+
+.button_text {
+  padding-left: 8px;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: #374760;
+}
+
+/* Saved Lists */
+
+#saved_lists_box {
+  width: 50%;
+  float: left;
+  padding-top: 100px;
+  padding-left: 10%;
+}
+
+#lists_title {
+  font-weight: 400;
+  width: 250px;
+}
+
+#lists_table {
+  height: 510px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+  overflow: scroll;
+  float: left;
+}
+
+.list {
+  border-bottom: 1px solid #dbdbdb;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: initial;
+}
+
+.list:Hover {
+  background-color: #f2f2f2;
+}
+
+.list_sel {
+  border-bottom: 1px solid #dbdbdb;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #d9f2fc;
+}
+
+.list_sel:Hover {
+  background-color: #c0d9e2;
+}
+
+
+/* The Pop (background) */
+.pop {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Pop Content */
+.pop-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%;
+  height: 575px;
+  overflow: scroll;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Movie List */
+
+#list_box {
+  width: 80%;
+  float: left;
+  padding-top: 20px;
+  padding-left: 10%;
+}
+
+#list_title {
+  font-weight: 400;
+  width: 100%;
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+
+#list_table {
+  height: 475px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+  overflow: scroll;
+  float: left;
+}
+
+.result {
+  border-bottom: 1px solid #dbdbdb;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: initial;
+}
+
+.result:Hover {
+  background-color: #f2f2f2;
+}
+
+.result_sel {
+  border-bottom: 1px solid #dbdbdb;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #d9f2fc;
+}
+
+.result_sel:Hover {
+  background-color: #c0d9e2;
+}
+
+
+/* Pop Content */
+#poster {
+  float: left;
+  width: 200px;
+}
+
+#movie_info {
+  padding-left: 20px;
+  float: left;
+  width: 75%;
+}
+
+.info_title {
+  padding-top: 10px;
+  font-weight: 400;
+}
+
+.info {
+  padding-top: 4px;
+  font-size: 15px;
+}
+
+#website {
+  padding-top: 4px;
+  font-size: 15px;
+}
+''')
