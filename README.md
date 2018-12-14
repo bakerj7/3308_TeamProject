@@ -12,7 +12,7 @@ Movie Queue
 - Download files
 - Enter command: "chmod +x cgi-bin/*"
 - Start server with command: "python3 -m http.server 8000 --cgi --bind 127.0.0.1"
-- In chrome got to: "http://127.0.0.1:8000/cgi-bin/index.py"x
+- In chrome got to: "http://127.0.0.1:8000/cgi-bin/index.py"
 
 ## Vision statement: what would you tell potential customers?:
 A website to track and get notifications for movies that meet your interest.  
