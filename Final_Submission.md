@@ -12,10 +12,11 @@ Movie Tracker
 https://trello.com/b/uFD8st2Q/3308-team-project
 
 ## Demo Video:
-Availible for download in the "Presentation" folder of the GitHub repository linked below in the "Version control link" section.
+Available for download in the "Presentation" folder of the GitHub repository linked below in the "Version control link" section.
 
 ## Version control link:
 https://github.com/bakerj7/3308_TeamProject
 
 ## Heroku link:
-To be added
+https://damp-beach-41556.herokuapp.com/
+(CGI does not run properly, run app locally on Chrome)
