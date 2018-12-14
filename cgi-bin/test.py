@@ -7,7 +7,9 @@ import unittest
 import os
 os.system("pip install mock")
 import mock
-import movieApp
+import index
+import create
+import search
 
 class movieAppTestCase(unittest.TestCase):
 
@@ -33,94 +35,58 @@ class movieAppTestCase(unittest.TestCase):
          
     #Unit test for filtering movie list by category.
     def test_filters(self):
-        #Test Genre filtering
-        userInputs = ["test_1", "Action", "None"]
-        with mock.patch('builtins.input', side_effect=userInputs):
-            movieApp.createList()
-        count = 0
-        with open("./Lists/test_1.txt") as f:
-            next(f); next(f); next(f); next(f)
-            for line in f:
-                self.assertTrue("Action" in line)
-                next(f)
-                count += 1
-        self.assertEqual(1157, count), "checking all Action movies are found"
         #Test Actor filtering
-        userInputs = ["test_2", "Action", "Johnny Depp"]
+        userInputs = ["test_1", "Action", "Johnny Depp"]
         with mock.patch('builtins.input', side_effect=userInputs):
-            movieApp.createList()
-        count = 0
-        with open("./Lists/test_2.txt") as f:
-            next(f); next(f); next(f); next(f)
-            for line in f:
-                self.assertTrue("Johnny Depp" in line)
-                next(f)
-                count += 1
-        self.assertEqual(9, count)  #Make sure all lines were found
+            create.getInput()
+        file =  os.path.exists("./Lists/test_1.txt") 
+        self.assertEqual(True, file), "checking movies found and file made"
         #Test Genre and Actor filtering
-        userInputs = ["test_3", "Drama", "Robert De Niro"]
+        userInputs = ["test_2", "Drama", "Robert De Niro"]
         with mock.patch('builtins.input', side_effect=userInputs):
-            movieApp.createList()
-        count = 0
-        with open("./Lists/test_3.txt") as f:
-            next(f); next(f); next(f); next(f)
-            for line in f:
-                self.assertTrue(("Drama" in line) and ("Robert De Niro" in line))
-                next(f)
-                count += 1
-        self.assertEqual(10, count)  #Make sure all lines were found
-        #Test Genre not present
-        userInputs = ["test_4", "ABCDE", "None"]
-        with self.assertRaises(ValueError):
-            with mock.patch('builtins.input', side_effect=userInputs):
-                movieApp.createList()
-                
-        #Test Actor not present
-        userInputs = ["test_5", "Action", "ABCDE"]
-        with self.assertRaises(ValueError):
-            with mock.patch('builtins.input', side_effect=userInputs):
-                movieApp.createList()
+            create.getInput()
+        file =  os.path.exists("./Lists/test_2.txt")
                 
     def test_list_create(self):
         # Test Creation of .txt file
         # Check if file exsists
         userInputs = ["test_1", "Drama", "Marlon Brando"]
         with mock.patch('builtins.input', side_effect=userInputs):
-            movieApp.createList()
+            create.getInput()
         self.assertTrue(os.path.isfile('./Lists/test_1.txt'))
 
         userInputs = ["test_2", "Action", "Ruth Wilson"]
         with mock.patch('builtins.input', side_effect=userInputs):
-            movieApp.createList()
+            create.getInput()
         self.assertTrue(os.path.isfile('./Lists/test_2.txt'))
 
         #Check if file in not empty
         userInputs = ["test_3", "Adventure", "Scarlett Johansson"]
         with mock.patch('builtins.input', side_effect=userInputs):
-            movieApp.createList()
+            create.getInput()
         self.assertTrue(os.path.getsize('./Lists/test_3.txt') > 0)
 
         userInputs = ["test_4", "Documentary", "Daniel Radcliffe"]
         with mock.patch('builtins.input', side_effect=userInputs):
-            movieApp.createList()
-        self.assertTrue(os.path.getsize('./Lists/test_3.txt') > 0)
+            create.getInput()
+        self.assertTrue(os.path.getsize('./Lists/test_4.txt') > 0)
 
     def test_user_list(self):
         userInputs = ["test_1", "Drama", "Marlon Brando"]
         with mock.patch('builtins.input', side_effect=userInputs):
-            movieApp.createList()
+            create.getInput()
 
         userInputs = ["test_2", "Action", "Ruth Wilson"]
         with mock.patch('builtins.input', side_effect=userInputs):
-            movieApp.createList()
+            create.getInput()
             
         userInputs = ["test_3", "Adventure", "Scarlett Johansson"]
         with mock.patch('builtins.input', side_effect=userInputs):
-            movieApp.createList()
+            create.getInput()
 
         userInputs = ["test_4", "Documentary", "Daniel Radcliffe"]
         with mock.patch('builtins.input', side_effect=userInputs):
-            movieApp.createList()
+            create.getInput()
 
         def find_user_lists(file_name):
             folder = os.listdir("./Lists")
@@ -157,31 +123,31 @@ class movieAppTestCase(unittest.TestCase):
     def test_search(self):
         userInputs = ["test_1", "Drama", "Marlon Brando"]
         with mock.patch('builtins.input', side_effect=userInputs):
-            movieApp.createList()
+            create.getInput()
 
         userInputs = ["test_2", "Action", "Ruth Wilson"]
         with mock.patch('builtins.input', side_effect=userInputs):
-            movieApp.createList()
+            create.getInput()
             
         userInputs = ["test_3", "Adventure", "Scarlett Johansson"]
         with mock.patch('builtins.input', side_effect=userInputs):
-            movieApp.createList()
+            create.getInput()
 
         userInputs = ["test_4", "Documentary", "Daniel Radcliffe"]
         with mock.patch('builtins.input', side_effect=userInputs):
-            movieApp.createList()
+            create.getInput()
             
-        found = movieApp.findFile("test_1")
-        self.assertEqual(True, found) #Make sure file was found
-        found = movieApp.findFile("test_2")
-        self.assertEqual(True, found) #Make sure file was found
-        found = movieApp.findFile("test_3")
-        self.assertEqual(True, found) #Make sure file was found
-        found = movieApp.findFile("test_4")
-        self.assertEqual(True, found) #Make sure file was found
+        found = search.findFile("test_1")
+        self.assertEqual("./Lists/test_1.txt", found) #Make sure file was found
+        found = search.findFile("test_2")
+        self.assertEqual("./Lists/test_2.txt", found) #Make sure file was found
+        found = search.findFile("test_3")
+        self.assertEqual("./Lists/test_3.txt", found) #Make sure file was found
+        found = search.findFile("test_4")
+        self.assertEqual("./Lists/test_4.txt", found) #Make sure file was found
         
-        found = movieApp.findFile("notTest")
-        self.assertEqual(False, found) #Make sure file was not found
+        found = search.findFile("notTest")
+        self.assertEqual("", found) #Make sure file was not found
 
 
 # Main: Run Test Cases
